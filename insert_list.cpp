@@ -11,7 +11,7 @@ int main(){
 	scanf("%d",&val);
 	printf("Enter position to insert:\n");
 	scanf("%d",&pos);
-	for(i=11;i>=pos-1;--i){
+	for(i=9;i>=pos-1;i--){
 		a[i+1]=a[i];
 	}
 	a[pos-1]=val;
