@@ -93,13 +93,13 @@ void pop(q *q1)
     int x = q1->item[q1->front];
     printf("The popped element is %d\n", x);
 
-    if (q1->front == q1->rear)
+    if (q1->front==q1->rear)
     {
-        q1->front = q1->rear = -1;
+        q1->front=q1->rear=-1;
     }
     else
     {
-        q1->front = (q1->front + 1) % max;
+        q1->front=(q1->front+1)%max;
     }
 }
 
@@ -112,13 +112,13 @@ void display(q *q1)
     }
 
     printf("\nElements in queue: ");
-    int i = q1->front;
+    int i=q1->front;
     while (1)
     {
-        printf("%d\t", q1->item[i]);
+        printf("%d\t",q1->item[i]);
         if (i == q1->rear)
             break;
-        i = (i + 1) % max;
+        i=(i +1)%max;
     }
     printf("\n");
 }
